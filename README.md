@@ -14,6 +14,35 @@ Vision Transformers follow a unique architecture that processes images as sequen
 
 ![Vision Transformer Architecture](images/vit_architecture.png)
 
+### Model Specifications
+
+This repository uses the **`google/vit-base-patch16-224`** model with the following specifications:
+
+| Specification | Value | Description |
+|---------------|-------|-------------|
+| **Model Name** | ViT-Base-Patch16-224 | Vision Transformer Base architecture |
+| **Input Size** | 224 × 224 pixels | Standard ImageNet resolution |
+| **Patch Size** | 16 × 16 pixels | Size of each image patch |
+| **Number of Patches** | 196 (14 × 14 grid) | Total patches per image |
+| **Embedding Dimension** | 768 | Hidden size for patch embeddings |
+| **Number of Layers** | 12 | Transformer encoder layers |
+| **Number of Attention Heads** | 12 | Multi-head attention heads per layer |
+| **MLP Dimension** | 3072 | Hidden dimension in feedforward network |
+| **Parameters** | ~86M | Total trainable parameters |
+| **Pre-training Dataset** | ImageNet-21k | Large-scale image classification |
+
+#### Architecture Components
+
+1. **Patch Embedding Layer**: Converts 16×16 patches into 768-dimensional vectors
+2. **Positional Encoding**: Learnable position embeddings added to patch embeddings
+3. **12 Transformer Encoder Blocks**: Each containing:
+   - Layer Normalization
+   - Multi-Head Self-Attention (12 heads)
+   - Layer Normalization
+   - MLP (Feed-Forward Network)
+   - Residual connections
+4. **Classification Head**: Final MLP layer for ImageNet-1k classification (1000 classes)
+
 ### Attack Surface in ViT
 
 The attacks in this repository target two critical components of the Vision Transformer architecture:
