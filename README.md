@@ -12,7 +12,7 @@ Vision Transformers process images using self-attention mechanisms and patch-bas
 
 Vision Transformers follow a unique architecture that processes images as sequences of patches, fundamentally different from CNNs' convolution-based approach.
 
-![Vision Transformer Architecture](images/vit_architecture.png)
+![Vision Transformer Architecture](Vit/images/vit_architecture.png)
 
 ### Model Specifications
 
